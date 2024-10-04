@@ -1,27 +1,39 @@
 import React from "react";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom"
 
 
-//react.createelement => object =>html element(render)
-const heading=React.createElement("h1",
-    {id:"heading"},"Namaste raect")
-
-
-//jsx is not html is it like html
-const jsxHeading=<h1 id="heading">Muskan gupta</h1>
-
-//react component
-//class based comp-old way to writing codeeeeeeee
-
-
-//functional based comp-new way
-const HeadingComponenet=()=>{
-    <div id="container">
+const Header = () => {
+    return (
+      <div className="header">
+        <div className="logo-container">
+          <img
+            className="logo"
+            src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"
+            alt="Logo" 
+          />
+        </div>
+        
+        <div className="nav-items">
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Cart</li>
+          </ul>
+        </div>
+      </div>
+    );
+  };
   
-    <h1 className="heading">Namaste react dunc </h1>
-    </div>
-}
+
+const AppLayout = ()=>{
+    return (
+        <div className="app">
+     <Header />
+        </div>
+    );
+};
 
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponenet/>)
+root.render(<AppLayout />)
