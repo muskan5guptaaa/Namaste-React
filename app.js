@@ -24,12 +24,34 @@ const Header = () => {
       </div>
     );
   };
+ 
+  const ResturantCard=()=>{
+    return(
+      <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
+        
+        <h3>Silver spoon</h3>
+       </div>
+    )
+  }
+  const Body=()=>{
+    return(
+           <div className="body">
+<div className="search">Search</div>
+<div className="res=container">
+
+<ResturantCard />
+</div>
+      </div>
+    )
+  }
   
 
 const AppLayout = ()=>{
     return (
         <div className="app">
      <Header />
+     <Body/>
+
         </div>
     );
 };
